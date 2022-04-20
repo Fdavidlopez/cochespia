@@ -1,0 +1,38 @@
+
+<html style="position: relative;">
+
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+    <title>Busqueda de coches</title>
+    </head>
+    
+    <body>  
+    
+    <center><h1 style="color: blue;">PRINCIPALES CARACTERÍSTICAS DEL COCHE</h1>
+    
+        <form action="{% url 'result' %}">
+            
+            <p>Kilómetros : <input type="text" required name="km" class="form-control" class="form-label" id="exampleFormControlInput1" placeholder="Introduce Número de Km 1.000, 2.000 ..."></p>
+            <p>Año de Matriculación : <input type="text" required name="year" class="form-control" class="form-label" id="exampleFormControlInput1" placeholder="Intoduce el Año de matriculación 2000,2002 ..."></p>
+            <p>Centimetros Cúbicos : <input type="text" required name="cubicCapacity" class="form-control" class="form-label" id="exampleFormControlInput1" placeholder="Intoduce los CV del coche"></p>
+            <p>Numero de Puertas : <input type="text" required name="door" class="form-control" class="form-label"id="exampleFormControlInput1" placeholder="Intoduce el número de puertas del coche" ></p>
+            <p>Hp: <input type="text" required name="hp" class="form-control" class="form-label"id="exampleFormControlInput1" placeholder="Intoduce la potencia del coche"></p>
+            <select name="model" id="model">
+                <option value="modeloentrenado">Lineal Regressor</option>
+                <option value="Decisiontree">Decision Tree</option>
+                <option value="knn">KNN</option>
+                <option value="RandomForest">Random Forest</option>
+                <option value="keras">Keras</option>
+            </select>
+            
+    
+            <input type="submit"  class="btn btn-success" value="Predecir Precio">
+        </form>
+    </center>
+    
+    </body>
+    
+    
+    
+    </html>
